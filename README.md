@@ -20,10 +20,12 @@ A code overview
 
 * An **autonomous** that reads scripts (with its own language) placed via FTP on the cRIO.
 
-	-There is an overarching structure that manages commands based on their parameters outlined in the script
+	* There is an overarching structure that manages commands based on their parameters outlined in the script
 	
-	-Possible autonomous functions reference already written code in Periodic Tasks.vi
-	-An autonomous script is selected by the driver controller while the robot is disabled
+	* Possible autonomous functions reference already written code in Periodic Tasks.vi
+	
+	* An autonomous script is selected by the driver controller while the robot is disabled
+	
 * All logic is contained inside the **Periodic Tasks.vi**, with control data passed to Periodic Tasks via local variables
 	-This means all code is consistently executed (no depending on DS packets affecting how fast commands are updated)
 	-Teleop.vi is used to assign joystick commands into robot commands, each with its own local variable
