@@ -54,7 +54,7 @@ A code overview
 	
 	* Custom ramping on the joystick input to reduce quick, potentially hazardous movements
 	
-*An **intake logic** system used to suck balls in one at a time, and queue balls out one at a time
+* An **intake logic** system used to suck balls in one at a time, and queue balls out one at a time
 
 	* Three eye sensors indicate whether balls are in their appropriate positions
 
