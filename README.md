@@ -1,17 +1,17 @@
-Team 2337 2012 Rebound Rumble Code
-
 For the first time, Team 2337 is open-sourcing our competition code for 2012. Any comments and questions are welcome.
 
 For more information on the robot and performance: http://www.team2337.com/robots.html
 
 The robot CAD can be found on FRC-Designs: http://www.frc-designs.com/html/CAD_2012.html
 
+GitHub handles LabVIEW files as strictly binary files, so to actually view the code, one must download this whole repo and view it on a local installation of LabVIEW 2012.
+
 A quick robot overview:
 -----------
 
 * A 4CIM, 8WD dual-speed drivetrain using pneumatic tires designed to minimize chain use
 * Two KOP-wheel shooter, fixed hood, no turret. Powered by two Banebot 550s through a Cimulator gearbox.
-* A 33 and 148-inspired 'dingus', large pneumatic cylinder, used successfully for triple and co-op balances
+* A 33 and 148-inspired 'dingus' - large pneumatic cylinder - used successfully for triple and co-op balances
 * Bridge manipulator and external intake with CD7-related design, pneumatically powered, with throttle motors to direct the ball side to side
 * Intake and ball containment system designed to hold just three balls, powered by two AndyMarks and a Fisher Price
 
@@ -19,7 +19,7 @@ A quick robot overview:
 A code overview
 -----------
 
-* An **autonomous** that reads scripts (with its own language) placed via FTP on the cRIO.
+* An **autonomous that reads scripts** (with its own language) placed via FTP on the cRIO.
 
 	* There is an overarching structure that manages commands based on their parameters outlined in the script
 	
@@ -35,11 +35,11 @@ A code overview
 	
 	* Autonomous scripts reference these robot commands
 	
-* **Simple** shooter speed control
+* **Simple shooter speed control**
 
 	* A proximity sensor is mounted to detect one rising edge per revolution of the shooter wheel, managed by the WPI Counter class
 	
-	* A well-tuned PI loop, with quick ramping up to speed and precision of +/- 5 RPM at normal key shooting speeds
+	* A well-tuned PI loop to actually manage speed control, with quick ramping up to speed and precision of +/- 5 RPM at normal key shooting speeds
 	
 * A **basic vision** program mostly copied from the Rectangular Target Processing example
 
