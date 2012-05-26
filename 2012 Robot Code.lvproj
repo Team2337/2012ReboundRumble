@@ -146,7 +146,6 @@ KeepAliveTimeout 60
 			<Item Name="BeltControl.vi" Type="VI" URL="../BeltControl.vi"/>
 			<Item Name="PotRounding.vi" Type="VI" URL="../PotRounding.vi"/>
 			<Item Name="config file parser.vi" Type="VI" URL="../config file parser.vi"/>
-			<Item Name="Silas&apos; arcade drive.vi" Type="VI" URL="../../robot project/2012-Robot-Code/Silas&apos; arcade drive.vi"/>
 			<Item Name="hmi_cheesy_drive.vi" Type="VI" URL="../hmi_cheesy_drive.vi"/>
 			<Item Name="limit_pct.vi" Type="VI" URL="../limit_pct.vi"/>
 		</Item>
@@ -760,6 +759,7 @@ KeepAliveTimeout 60
 			<Item Name="nivision.dll" Type="Document" URL="nivision.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Silas&apos; arcade drive.vi" Type="VI" URL="../../robot project/2012-Robot-Code/Silas&apos; arcade drive.vi"/>
 			<Item Name="niLvFpgaFormatErrorSource.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaFormatErrorSource.vi"/>
 			<Item Name="niLvFpgaWhatHappensToTopLevelVI.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaWhatHappensToTopLevelVI.ctl"/>
 			<Item Name="niFpgaNodeNameForErrorReporting.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/interface/common/niFpgaNodeNameForErrorReporting.ctl"/>
