@@ -27,20 +27,35 @@ A code overview
 	* An autonomous script is selected by the driver controller while the robot is disabled
 	
 * All logic is contained inside the **Periodic Tasks.vi**, with control data passed to Periodic Tasks via local variables
-	-This means all code is consistently executed (no depending on DS packets affecting how fast commands are updated)
-	-Teleop.vi is used to assign joystick commands into robot commands, each with its own local variable
-	-Autonomous scripts reference these robot commands
+
+	* This means all code is consistently executed (no depending on DS packets affecting how fast commands are updated)
+	
+	* Teleop.vi is used to assign joystick commands into robot commands, each with its own local variable
+	
+	* Autonomous scripts reference these robot commands
+	
 * **Simple** shooter speed control
-	-A proximity sensor is mounted to detect one rising edge per revolution of the shooter wheel, managed by the WPI Counter class
-	-A well-tuned PI loop, with quick ramping up to speed and precision of +/- 5 RPM at normal key shooting speeds
+
+	* A proximity sensor is mounted to detect one rising edge per revolution of the shooter wheel, managed by the WPI Counter class
+	
+	* A well-tuned PI loop, with quick ramping up to speed and precision of +/- 5 RPM at normal key shooting speeds
+	
 * A **basic vision** program mostly copied from the Rectangular Target Processing example
-	-'Auto-targeting' program moves wheels to line up robot with target
-	-Auto-targeting is still not well-tuned, not very functional
-	-A very low camera exposure is used to limit the amount of possible colors interfering with the mask
+
+	* 'Auto-targeting' program moves wheels to line up robot with target
+	
+	* Auto-targeting is still not well-tuned, not very functional
+	
+	* A very low camera exposure is used to limit the amount of possible colors interfering with the mask
+	
 * **'Cheesy drive'** - a form of arcade drive - provided by FRC 33 (which was based on work done by FRC 254)
-	-First year of non-mechanum, non-Lunacy wheel drive for 2337
-	-Custom ramping on the joystick input to reduce quick, potentially hazardous movements
+
+	* First year of non-mechanum, non-Lunacy wheel drive for 2337
+	
+	* Custom ramping on the joystick input to reduce quick, potentially hazardous movements
+	
 *An **intake logic** system used to suck balls in one at a time, and queue balls out one at a time
-	-Three eye sensors indicate whether balls are in their appropriate positions
+
+	* Three eye sensors indicate whether balls are in their appropriate positions
 
 As an offseason project, the 'brogrammming' team is also working on a Java port of our code. When finished, it will also be open-sourced.
