@@ -1,0 +1,27 @@
+#feed 4-ball auton
+#basicDrive(relative, start type, start param, end type, end param, driveSpeed, [label])
+#manualDrive(relative, start type, start param, end type, end param, leftDriveSpeed, rightDriveSpeed, [label])
+#intake(relative, start type, start param, end type, end param, [label])
+#shoot(relative, start type, start param, end type, end param, [label])
+#setShooterRPM(relative, start type, start param, speed, [label (not recommended)])
+#testFunct(relative, start type, start param, end type, end param, [label])
+
+setShooterRPMNoDelay(relative, t, 0, 2400)
+
+shoot(relative, t, 4, t, 1, shootOne)
+intake(relative, label-end, shootOne, t, 1, intakeOne)
+testFunct(relative, label-end, intakeOne, t, 1.5, beginShootTwo)
+shoot(relative, label-end, beginShootTwo, t, 1, intakeOtherBot)
+
+#5.5 seconds have passed
+#intake for 3 seconds
+intake(relative, label-end, intakeOtherBot, t, 2, finishOtherBotIntake)
+
+#7.5 seconds
+shoot(relative, label-end, finishOtherBotIntake, t, 1, shootThree)
+
+#11.5 seconds
+testFunct(relative, label-end, shootThree, t, 1.5, beginShootFour)
+
+#12.5 seconds
+shoot(relative, label-end, beginShootFour, t, 10)

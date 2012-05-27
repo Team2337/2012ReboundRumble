@@ -1,0 +1,18 @@
+A quick guide to the scripts for Team 2337's automonous:
+
+# = comment
+First line is quick description of the script, displayed under User Messages in the DS for drivers pre-match
+
+All of the different script 'functions':
+
+basicDrive(relative, start type, start param, end type, end param, driveSpeed, [label])
+manualDrive(relative, start type, start param, end type, end param, leftDriveSpeed, rightDriveSpeed, [label])
+intake(relative, start type, start param, end type, end param, [label])
+shoot(relative, start type, start param, end type, end param, [label])
+setShooterRPM(relative, start type, start param, speed, [label (not recommended)])
+testFunct(relative, start type, start param, end type, end param, [label])
+setGear(relative, start type, start param, "low"/"high")
+
+Relative, I believe, was never implemented in the code. I believe it was intended to be able to chain functions together.
+
+# = comment

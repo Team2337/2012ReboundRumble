@@ -1,0 +1,45 @@
+#bridge auton
+#basicDrive(relative, start type, start param, end type, end param, driveSpeed, [label])
+#manualDrive(relative, start type, start param, end type, end param, leftDriveSpeed, rightDriveSpeed, [label])
+#intake(relative, start type, start param, end type, end param, [label])
+#shoot(relative, start type, start param, end type, end param, [label])
+#setShooterRPM(relative, start type, start param, speed, [label (not recommended)])
+#testFunct(relative, start type, start param, end type, end param, [label])
+
+#0 seconds
+setShooterRPMNoDelay(relative, t, 0, 2400)
+setGear(relative, t, 0, low)
+
+#2 seconds, shooter is charged, fire ball
+shoot(relative, t, 4, t, .5, shootOne)
+
+#2.5 seconds, load in new ball.  (make asc.?)
+intake(relative, label-end, shootOne, t, .5, intakeOne)
+
+#3 seconds
+testFunct(relative, label-end, intakeOne, t, .5, beginShootTwo)
+
+#3.5 seconds shooter has had 1.5 seconds to recover.  Make shorter?  just remove testFunct.
+shoot(relative, label-end, beginShootTwo, t, 1, backUp)
+
+#4.5 seconds	starting to back up to bridge
+basicDrive(relative, label-end, backUp, e, -500, -.5, atRamp)
+
+#~6.5 seconds		put down arm and turn on intake
+setIntakeSolenoid(relative, label-end, atRamp, down)
+intake(relative, label-end, atRamp, t, 3, intakeFinished)
+
+#~9.5 seconds		lift up arm and drive forward again
+setIntakeSolenoid(relative, label-end, intakeFinished, up)
+
+#commenting out this line so that robot only moves one direction
+#basicDrive(relative, label-end, intakeFinished, e, 3000, .5, backToKey)
+
+#~12 seconds		shoot
+shoot(relative, label-end, backToKey, t, .5, shootOne)
+
+intake(relative, label-end, shootOne, t, .5, intakeOne)
+
+testFunct(relative, label-end, intakeOne, t, .5, beginShootTwo)
+
+shoot(relative, label-end, beginShootTwo, t, 1, backUp)
