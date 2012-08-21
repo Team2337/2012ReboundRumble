@@ -54,6 +54,7 @@
 		<Property Name="target.FPProtocolGlobals_ControlTimeLimit" Type="Int">300</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Port" Type="Int">80</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Timeout" Type="Int">60</Property>
+		<Property Name="target.IOScan.Enabled" Type="Bool">true</Property>
 		<Property Name="target.IOScan.Faults" Type="Str"></Property>
 		<Property Name="target.IOScan.NetVarPeriod" Type="UInt">100</Property>
 		<Property Name="target.IOScan.NetWatchdogEnabled" Type="Bool">false</Property>
@@ -148,6 +149,7 @@ KeepAliveTimeout 60
 			<Item Name="config file parser.vi" Type="VI" URL="../config file parser.vi"/>
 			<Item Name="hmi_cheesy_drive.vi" Type="VI" URL="../hmi_cheesy_drive.vi"/>
 			<Item Name="limit_pct.vi" Type="VI" URL="../limit_pct.vi"/>
+			<Item Name="BeltControlOverhaul.vi" Type="VI" URL="../BeltControlOverhaul.vi"/>
 		</Item>
 		<Item Name="Vision Support Code" Type="Folder">
 			<Item Name="Aspect Ratio Score.vi" Type="VI" URL="../Vision and friends/Aspect Ratio Score.vi"/>
@@ -182,8 +184,9 @@ KeepAliveTimeout 60
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="VisionData.vi" Type="VI" URL="../VisionData.vi"/>
 		<Item Name="globals.lvlib" Type="Library" URL="../globals.lvlib"/>
-		<Item Name="Global 1.vi" Type="VI" URL="../Global 1.vi"/>
 		<Item Name="Periodic Tasks.vi" Type="VI" URL="../Periodic Tasks.vi"/>
+		<Item Name="VisionDataNetwork.vi" Type="VI" URL="../VisionDataNetwork.vi"/>
+		<Item Name="shifter.vi" Type="VI" URL="../../DebugDashboardVisionVersion/Debugging subVIs/shifter.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="WPI_DriverStationDigitalData.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DriverStation/WPI_DriverStationDigitalData.ctl"/>
@@ -760,6 +763,7 @@ KeepAliveTimeout 60
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Silas&apos; arcade drive.vi" Type="VI" URL="../../robot project/2012-Robot-Code/Silas&apos; arcade drive.vi"/>
+			<Item Name="risingedge.vi" Type="VI" URL="../../DebugDashboardVisionVersion/risingedge.vi"/>
 			<Item Name="niLvFpgaFormatErrorSource.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaFormatErrorSource.vi"/>
 			<Item Name="niLvFpgaWhatHappensToTopLevelVI.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaWhatHappensToTopLevelVI.ctl"/>
 			<Item Name="niFpgaNodeNameForErrorReporting.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/interface/common/niFpgaNodeNameForErrorReporting.ctl"/>

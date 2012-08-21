@@ -1,10 +1,4 @@
 #feed 4-ball auton
-#basicDrive(relative, start type, start param, end type, end param, driveSpeed, [label])
-#manualDrive(relative, start type, start param, end type, end param, leftDriveSpeed, rightDriveSpeed, [label])
-#intake(relative, start type, start param, end type, end param, [label])
-#shoot(relative, start type, start param, end type, end param, [label])
-#setShooterRPM(relative, start type, start param, speed, [label (not recommended)])
-#testFunct(relative, start type, start param, end type, end param, [label])
 
 setShooterRPMNoDelay(relative, t, 0, 2400)
 
