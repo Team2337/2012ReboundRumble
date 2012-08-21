@@ -1,4 +1,8 @@
-For the first time, Team 2337 is open-sourcing our competition code for 2012. Any comments and questions are welcome.
+For the first time, Team 2337 is open-sourcing our competition code for Rebound Rumble, the 2012 FIRST FRC competition. Our robot was named the Admiral.
+
+The code is still being changed, to accomodate other team projects and fix competition season issues.
+
+Any comments and questions are welcome (preferably on Chief Delphi: http://www.chiefdelphi.com/forums/showthread.php?t=106664 )
 
 For more information on the robot and performance: http://www.team2337.com/robots.html
 
